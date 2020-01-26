@@ -9,26 +9,26 @@ File info: In the following you find all possible multiple choice questions. The
 q1: Is the MVC design pattern suitable for both desktop and web applications? 
 -No
 -Yes, as long as the View an the Controller are written in C#
--Yes *
+-Yes 
 -Partially, as long as the model supports Postgres 
 ----------------------------
 q2: What is a benefit of using MVC design pattern? 
 -Strong typing
--Separation of concerns *
+-Separation of concerns 
 -High performance
 -Simple user interface
 ----------------------------
 q3: What is a benefit of using MVC design pattern? 
 -Strong typing
 -High performance
--Managing complexity *
+-Managing complexity 
 -It simplifies the integration of external libraries  
 ----------------------------
 q4: What is a benefit of using MVC design pattern? 
 -Strong typing
 -High performance
 -It simplifies the integration of external libraries  
--It makes it easier to test each part of the application as a unit *
+-It makes it easier to test each part of the application as a unit 
 ----------------------------
 q5: Given a context class that defines a relationship between two entities Movie and Actor, what 
 is the result of executing the OnModelCreating-method:
@@ -50,7 +50,7 @@ is the result of executing the OnModelCreating-method:
         }
 ...
 
-- A N-to-N relationship between the entities Movie and Actor. It will create three tables in the database. *
+- A N-to-N relationship between the entities Movie and Actor. It will create three tables in the database. 
 - A One-to-N relationship. It will create two tables in the database.
 - A N-to-N relationship. It will create two tables in the database.
 - A One-to-N relationship. It will create three tables in the database.
@@ -58,13 +58,13 @@ is the result of executing the OnModelCreating-method:
 ----------------------------
 q6: EF can resolve an One-to-N relationship just by following the provided classes' structure: 
 -Yes, if the foreign key is unique
--Yes if you follow the conventions *
+-Yes if you follow the conventions 
 -No
 -Yes, if the migration scripts are setup correctly
 ----------------------------
 q7: An entity X is related to an entity Y through a foreign key (One-to-N). What happens to Y if X is deleted, when using LINQ in combination with Postgres? 
 -Error
--Both X and Y are deleted *
+-Both X and Y are deleted 
 -Nothing changes
 -The foreign key is set to NULL in Y
 
@@ -73,7 +73,7 @@ q8: In the context of EF, given the following code using(var db = new MyContext(
 -To avoid the database to get erased
 -It starts the tracking of entities
 -Nothing, it is just a syntactic sugar
--It de-allocates the instance of the database after the body is executed *
+-It de-allocates the instance of the database after the body is executed 
 ----------------------------
 q9:What does the following code do?
 ...
@@ -83,7 +83,7 @@ q9:What does the following code do?
  ...
 
 -It connects the current Context to a database called "Data Source=Movie.db"
--It connects the current Context to an Sqlite database *
+-It connects the current Context to an Sqlite database 
 -It gives a compilation error
 -It connects the current Context to a Postgres database
 ----------------------------
@@ -96,7 +96,7 @@ modelBuilder.Entity<Actor> ()
 ...
 
 -An N-to-N relationship from Movie to Actor is established
--A One-to-N relationship from Movie to Actor with MovieId as foreign key in Actor is created *
+-A One-to-N relationship from Movie to Actor with MovieId as foreign key in Actor is created 
 -A One-to-One relationship from Movie to Actor is established
 -A One-to-N relationship from Movie to Actor with ActorId as foreign key in Movie is created
 ----------------------------
@@ -112,7 +112,7 @@ foreach(var m in db.Movies){
 ...
 
 -Prints for every movie its actors
--Runtime error since Actors is always null *
+-Runtime error since Actors is always null 
 -Prints all the actors in the database
 -Runtime error since m is null
 ----------------------------
@@ -128,56 +128,56 @@ foreach(var m in db.Movies){
 
 -Prints for every movie its actors
 -Runtime error since Actors is always null 
--Prints for every movie the title followed by its actors' name * 
+-Prints for every movie the title followed by its actors' name 
 -Runtime error since m is null
 ----------------------------
 
 q13: var ms = db.Movies.Select(m=>m) vs var ms = db.Movies.Select(m=>m).toList() what is the difference? 
 
 -In the first one we load all the movies from the database, in the second one we store only the query/intention to select all the movies
--In the first one we store only the query/intention to select all the movies; in the second one we force EF to load all the movies from the db and to store them in ms *
+-In the first one we store only the query/intention to select all the movies; in the second one we force EF to load all the movies from the db and to store them in ms 
 -Both produce the same result
 -The first one is not possible whereas the second one is possible
 ----------------------------
 q14: Pagination is used to? 
 -Store data as pages in the database
--Retrieve only those records from the database that must be displayed for the particular page of data requested by the user *
+-Retrieve only those records from the database that must be displayed for the particular page of data requested by the user 
 -Protect users' identity
 -Retrieve all the records from the database but view them as pages
 ----------------------------
 q15: In REST every resource(URI) must implement all the HTTP Methods such as GET, POST, PUT?
--No, only if needed *
+-No, only if needed 
 -No, but you must always implement the same set of methods for every resource
 -Yes, all of them must be implemented
 -Yes, as long as GET is always present
 ----------------------------
 q16: In a RESTful application all methods are: 
 -Static
--Stateless *
+-Stateless 
 -Protected
 -Private
 ----------------------------
 q17: In which part of the HTTP GET message are the parameter sent: 
 -Footer
--Header *
+-Header 
 -Body
 -CSS
 ----------------------------
 q18: In a RESTful application for which operation HTTP POST is used?
--To create new entities *
+-To create new entities 
 -To delete duplicate entities
 -To mark entities for deletion
 -To change the primary key of an entity
 ----------------------------
 q19: In a RESTful application for which operation HTTP PUT is used? 
 -To create new entities
--To update entities *
+-To update entities 
 -To mark entities for deletion
 -To create a new entity from an already existing one
 ----------------------------
 q20: The code 404 is returned when? 
 -The parameters are missing
--Requesting a non existing data *
+-Requesting a non existing data 
 -The server is unreachable
 -The client is using an old version of javascript
 ----------------------------
@@ -185,7 +185,7 @@ q21: The code 500 is returned when?
 -The parameters are missing
 -Requesting a non existing URI 
 -The server is unreachable
--The server encountered an unexpected condition which prevented it from fulfilling the request *
+-The server encountered an unexpected condition which prevented it from fulfilling the request 
 -The client is using an old version of javascript
 ----------------------------
 q22: The code 400 is returned when? 
@@ -193,17 +193,17 @@ q22: The code 400 is returned when?
 -Requesting a non existing URI 
 -The server is unreachable
 -The client is using an old version of javascript
--The request had bad syntax or was inherently impossible to be satisfied *
+-The request had bad syntax or was inherently impossible to be satisfied 
 ----------------------------
 q23: The code 200 is returned when? 
 -The parameters are missing
 -Requesting a non existing URI 
 -The server is unreachable
--The request was fulfilled *
+-The request was fulfilled 
 -The client is using an old version of javascript
 ----------------------------
 q24: In a RESTful application each entity of the Model must be mapped to a unique resource identifier(URI): 
--No *
+-No 
 -yes
 -Depends, on the cardinality of the primary key
 -Yes, as long as all entities are correctly encapsulated
@@ -212,10 +212,10 @@ q25: In the following answers which item is a possible response for a RESTful ap
 -float and integer
 -Blob or HTML
 -string and XML
--JSON or HTML *
+-JSON or HTML 
 ----------------------------
 q26: Given the following code in Typescript <let x: true | string = false;>  what happens if you execute this code? 
--Compilation error *
+-Compilation error 
 -Runtime error
 -Logic error
 -false is assigned to x
@@ -224,7 +224,7 @@ q27: Given the following code in Typescript <let x: true | string = true;> what 
 -Compilation error
 -Runtime error
 -Logic error
--true is assigned to x *
+-true is assigned to x 
 ----------------------------
 q28: Given the following code in Typescript how many different types does the expression <type AB = A & B> produce?
     type A = { x:"A1" | "A2" } 
@@ -236,7 +236,7 @@ q28: Given the following code in Typescript how many different types does the ex
 -6 *
 ----------------------------
 q29: Who takes care of executing the code of a React components? 
-- The javascript engine running in the browser *
+- The javascript engine running in the browser 
 - The template engine on the server
 - The CLR of the dotnet platform
 - The controller
@@ -244,31 +244,31 @@ q29: Who takes care of executing the code of a React components?
 q30: Does the following expression force the re-rendering the component <this.state.x = 1>? 
 - Yes
 - No, because X can not be a number
-- No *
+- No 
 - Yes, as long as the component is running on an asynchronous thread
 ----------------------------
 q31: Does the following expression force the re-rendering the component <this.setState({...this.state, x : 1})>? 
 - No, because X can not be a number
 - No 
 - Yes, as long as the component is running on an asynchronous thread
-- Yes *
+- Yes 
 ----------------------------
 q32: What is the difference between state and props in React? 
 - They are the same
-- Given a component X, state contains local data of X, whereas props contains data coming from whoever instantiated X * 
+- Given a component X, state contains local data of X, whereas props contains data coming from whoever instantiated X 
 - Both can be used to pass data to a component
 - State is immutable whereas props are not
 ----------------------------
 q33: What does the render method of a React component return? 
 - Any type of objects
-- HTML objects * 
+- HTML objects 
 - The page to render after one second
 - Nothing, since the rendering in react is done automatically
 ----------------------------
 q34: Given the following code in Typescript how many different types does the expression <type AB = A | B> produce?
     type A = { x:"A1" | "A2" } 
     type B = { y:"B1" | "B2" | "B3" }
--11 *
+-11 
 -4
 -3
 -6 
@@ -276,42 +276,42 @@ q34: Given the following code in Typescript how many different types does the ex
 Q35: var ms = db.Movies.Select(m=>m) vs var ms = db.Movies.Select(m=>m).toArray() what is the difference? 
 
 -In the first one we load all the movies from the database, in the second one we store only the query/intention to select all the movies
--In the first one we store only the query/intention to select all the movies; in the second one we force EF to load all the movies from the db and to store them in ms *
+-In the first one we store only the query/intention to select all the movies; in the second one we force EF to load all the movies from the db and to store them in ms 
 -Both produce the same result
 -The first one is not possible whereas the second one is possible
  -----------------------
 q36: In which part of the HTTP POST message are the values sent by default: 
 -Footer
 -Header 
--Body *
+-Body 
 -CSS
 ----------------------------
 q37: In which part of the HTTP PUT message are the values sent by default: 
 -Footer
 -Header 
--Body *
+-Body 
 -CSS
 ----------------------------
 q38: In which part of the HTTP DELETE message are the parameters sent by default: 
 -Footer
--Header *
+-Header 
 -Body 
 -CSS
 ----------------------------
 q39: Which status code is returned when the requested HTTP source is not found? 
--404 *
+-404 
 -500 
 -200
 -400
 ----------------------------
 q40: What is the standard response code for a successful HTTP request? 
--200 *
+-200 
 -201 
 -200
 -400
 ----------------------------
 q41: Which status code is returned after an internal server error for a HTTP request? 
--500 *
+-500 
 -400
 -300
 -200
@@ -320,7 +320,7 @@ q42: Given the following code in Typescript <let x1: number | "loading" | "error
 -Compilation error
 -Runtime error
 -Logic error
--"loading" is assigned to x1 *
+-"loading" is assigned to x1 
 ---------------------------
 q43: Given the following code in Typescript 
 ... 
